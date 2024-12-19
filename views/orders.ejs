@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Page</title>
+    <style>
+        /* Basic reset and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and font styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container for the page */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Page header */
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f76c5e;
+            color: white;
+        }
+
+        table td {
+            background-color: white;
+        }
+
+        /* Order Status Badge */
+        .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .status.pending {
+            background-color: #f0ad4e;
+        }
+
+        .status.shipped {
+            background-color: #5bc0de;
+        }
+
+        .status.delivered {
+            background-color: #5cb85c;
+        }
+
+        .status.canceled {
+            background-color: #d9534f;
+        }
+
+        /* Button styling */
+        .btn {
+            display: inline-block;
+            background-color: #f76c5e;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #e65a4d;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Customer Orders</h1>
+        </header>
+
+        <!-- Orders Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Order Date</th>
+                    <th>Status</th>
+                    <th>Total Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Order Row 1 -->
+                <tr>
+                    <td>#1001</td>
+                    <td>John Doe</td>
+                    <td>2024-12-15</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td>$124.99</td>
+                    <td><a href="#" class="btn">View Order</a></td>
+                </tr>
+
+                <!-- Order Row 2 -->
+                <tr>
+                    <td>#1002</td>
+                    <td>Jane Smith</td>
+                    <td>2024-12-14</td>
+                    <td><span class="status shipped">Shipped</span></td>
+                    <td>$89.49</td>
+                    <td><a href="#" class="btn">View Order</a></td>
+                </tr>
+
+                <!-- Order Row 3 -->
+                <tr>
+                    <td>#1003</td>
+                    <td>Emily White</td>
+                    <td>2024-12-13</td>
+                    <td><span class="status delivered">Delivered</span></td>
+                    <td>$58.75</td>
+                    <td><a href="#" class="btn">View Order</a></td>
+                </tr>
+
+                <!-- Order Row 4 -->
+                <tr>
+                    <td>#1004</td>
+                    <td>Michael Brown</td>
+                    <td>2024-12-12</td>
+                    <td><span class="status canceled">Canceled</span></td>
+                    <td>$149.99</td>
+                    <td><a href="#" class="btn">View Order</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 My Amazing Store | All Rights Reserved</p>
+        </footer>
+    </div>
+
+</body>
+</html>
